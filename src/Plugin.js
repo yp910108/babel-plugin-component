@@ -82,7 +82,7 @@ module.exports = class Plugin {
       })
       if (this.style) {
         const stylePath = winPath(
-          this.style && typeof this.stylePath === 'function'
+          this.stylePath && typeof this.stylePath === 'function'
             ? this.stylePath(transformedMethodName)
             : join(this.libraryName, 'lib/theme', `${transformedMethodName}.css`)
         )
